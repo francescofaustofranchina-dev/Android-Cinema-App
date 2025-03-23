@@ -3,7 +3,8 @@ Last update: 23/03/2025
 ## Disclaimer
 To make the app work a server is required, so that's why I do not provide the apk. All the attached files are in Italian.
 ## Introduction
-Absolute Cinema is an Android app I developed with a colleague as a university project for an exam in 2024. We did this app for a fictitious cinema chain and we managed to finish our work in less than 2 months.
+Absolute Cinema is an Android app I developed with a colleague as a university project for an exam in 2024. This app utilizes a client-server architecture, with the Android app acting as the client and a Flask server providing the backend functionality. 
+We did this app for a fictitious cinema chain and we managed to finish our work in less than 2 months.
 ## App's features
 The software has a login/sign in system that is called during the app startup. If the user is already logged, the app skips the login screen. Of course we implemented some mechanisms in order to check the correctness and the validity
 of user's input. Once in the home screen, the user can see the scheduled movies to be shown in the cinemas chain's and the upcoming ones. The user can see the details of each movie and then choose if buying one or more tickets for a specific show, 
