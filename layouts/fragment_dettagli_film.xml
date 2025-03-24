@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp"/>
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:src="@drawable/banner_marte"
+                android:foreground="@drawable/film_banner_fade"
+                android:cropToPadding="true"
+                android:padding="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHeight_percent="0.24"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/locandina"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="8dp"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintEnd_toStartOf="@id/titolo"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintBottom_toBottomOf="@id/trailer_btn"
+                app:layout_constraintDimensionRatio="7:11">
+
+                <ImageView
+                    android:id="@+id/locandina_dettagli"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cropToPadding="true"
+                    android:padding="0dp"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/in_vacanza_su_marte"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/titolo"
+                style="@style/AppTheme.DefaultText.Big.Bold.White"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                tools:text="Nome film"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintStart_toEndOf="@id/locandina"
+                app:layout_constraintTop_toBottomOf="@id/banner"/>
+
+            <TextView
+                android:id="@+id/anno_eta_durata_genere"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Anno • Età • Durata • Genere"
+                app:layout_constraintStart_toStartOf="@id/titolo"
+                app:layout_constraintTop_toBottomOf="@id/titolo"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginTop="5dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/trailer_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_play"
+                android:text="@string/trailer"
+                app:layout_constraintEnd_toStartOf="@id/guideline2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/titolo"
+                app:layout_constraintTop_toBottomOf="@id/anno_eta_durata_genere"
+                android:layout_marginTop="10dp"
+                app:cornerRadius="13dp"/>
+
+            <TextView
+                android:id="@+id/info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Big.Bold.White"
+                android:text="@string/info_film"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/ic_info"
+                android:drawablePadding="4dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/locandina"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/regia_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                android:text="@string/regia_film"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/info_text"
+                app:layout_constraintEnd_toStartOf="@id/regia"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/regia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Nome regista"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toEndOf="@id/regia_text"
+                app:layout_constraintTop_toTopOf="@id/regia_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/cast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                android:text="@string/cast_film"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/regia"
+                app:layout_constraintEnd_toStartOf="@id/cast"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/cast"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Nomi attori"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toEndOf="@id/cast_text"
+                app:layout_constraintTop_toTopOf="@id/cast_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/lingua_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                android:text="@string/lingua_film"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/cast"
+                app:layout_constraintEnd_toStartOf="@id/lingua"
+                android:layout_marginTop="1dp"/>
+
+            <TextView
+                android:id="@+id/lingua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Italiano"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toEndOf="@id/lingua_text"
+                app:layout_constraintTop_toTopOf="@id/lingua_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginStart="4dp"/>
+
+            <TextView
+                android:id="@+id/trama_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Big.Bold.White"
+                android:text="@string/trama_film"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/ic_text"
+                android:drawablePadding="4dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/lingua"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/trama"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Trama del film"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/trama_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/programmazione_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Big.Bold.White"
+                android:text="@string/programmazione_film"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/ic_calendar"
+                android:drawablePadding="4dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/trama"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/programmazione"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Dal 30 Febbraio al 31 Febbraio:\n- Cinepanzerotto"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/programmazione_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tariffe_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Big.Bold.White"
+                android:text="@string/tariffe_film"
+                android:gravity="center_vertical"
+                app:drawableStartCompat="@drawable/ic_ticket"
+                android:drawablePadding="4dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/programmazione"
+                android:layout_marginTop="25dp"/>
+
+            <TextView
+                android:id="@+id/tariffe"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+                tools:text="Standard, Dolby"
+                android:lineSpacingExtra="1dp"
+                app:layout_constraintStart_toStartOf="@id/guideline1"
+                app:layout_constraintTop_toBottomOf="@id/tariffe_text"
+                app:layout_constraintEnd_toEndOf="@id/guideline2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="90dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/visualizza_spettacoli_btn"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:text="@string/visualizza_spettacoli"
+        android:textSize="16sp"
+        android:drawableEnd="@drawable/ic_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintWidth_percent="0.77"
+        app:cornerRadius="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

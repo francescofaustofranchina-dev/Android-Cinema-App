@@ -1,0 +1,175 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:paddingBottom="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profilo_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@color/blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_profilo"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/nome_cognome_utente_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.DefaultText.Big.Bold.White"
+            tools:text="Nome Cognome"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profilo_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/dati_account_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.DefaultText.Big.Bold.White"
+            android:text="@string/dati_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_cognome_utente_txt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/email_txt"
+            style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_email_small"
+            app:drawableTint="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dati_account_txt"
+            tools:text="E-mail: email.esempio@gmail.com" />
+
+        <TextView
+            android:id="@+id/num_telefono_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+            tools:text="Numero di telefono: 3333333333"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_phone_small"
+            android:drawablePadding="4dp"
+            app:drawableTint="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_txt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"/>
+
+        <TextView
+            android:id="@+id/data_nascita_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/AppTheme.DefaultText.Small.Normal.Grey"
+            tools:text="Data di nascita: 13/09/2002"
+            android:gravity="center_vertical"
+            app:drawableStartCompat="@drawable/ic_calendar_small"
+            android:drawablePadding="4dp"
+            app:drawableTint="@color/grey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/num_telefono_txt"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modifica_dati_btn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/modifica_dati"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_edit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nascita_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="25dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:cornerRadius="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/modifica_password_btn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/modifica_password"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_lock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/modifica_dati_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:cornerRadius="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/metodo_pagamento_btn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/metodo_pagamento"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_pagamento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/modifica_password_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:cornerRadius="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/storico_acquisti_btn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/storico_acquisti"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_history"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/metodo_pagamento_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:cornerRadius="15dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancella_account_btn"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:text="@string/cancella_account"
+            android:textSize="16sp"
+            android:drawableEnd="@drawable/ic_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/storico_acquisti_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintWidth_percent="0.85"
+            app:cornerRadius="15dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
