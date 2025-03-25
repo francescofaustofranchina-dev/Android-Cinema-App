@@ -1,8 +1,7 @@
 # 📱 Absolute Cinema (Android App)
-Last update: 24/03/2025
+Last update: 25/03/2025
 ## ❗ Disclaimer
-To make the app work a server is required, so that's why I do not provide the apk. The attached presentation file is in Italian. The *captures* folder contains app testing videos. The *scripts* and *layouts* folders contain some of the
-Kotlin scripts and some of the XML layouts respectively.
+To make the app work a server is required, so that's why I do not provide the apk. The attached presentation file is in Italian. The *scripts* and *layouts* folders contain some of the Kotlin scripts and some of the XML layouts respectively.
 ## 📄 Introduction
 Absolute Cinema is an Android app I developed with a colleague as a university project for an exam in 2024. This app utilizes a client-server architecture, with the Android app acting as the client and a Flask server providing the backend functionality. 
 We did this app for a fictitious cinema chain and we managed to finish our work in less than 2 months.
