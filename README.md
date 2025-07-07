@@ -1,5 +1,5 @@
 # 📱 Absolute Cinema (Android App)
-Last update: 25/03/2025
+Last update: 07/07/2025
 ## ❗ Disclaimer
 To make the app work a server is required, so that's why I do not provide the apk. The attached presentation file is in Italian. The *scripts* and *layouts* folders contain some of the Kotlin scripts and some of the XML layouts respectively.
 ## 📄 Introduction
