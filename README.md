@@ -15,7 +15,7 @@ The app runs without issues on a variety of devices and we patched all the bugs 
 ## 💪 Strenghts
 - **Simplicity:** the app contains only useful features so that it's simple to use for a huge variety of people.
 - **User-friendly UI:** a minimal and modern UI is provided to please the user's eyes and be intuitive.
-- **UI animations:** navigating between different screens feels very fluid because of simple transition animations.
+- **UI animations:** navigating between different screens feels particularly smooth because of simple transition animations.
 - **UI scalability and responsiveness:** the UI is made almost entirely of ConstraintLayout in order to improve performance and adapt it to different devices.
 ## ⌨️ Languages used
 - Kotlin
